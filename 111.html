@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>新媒体时代电视广告行业的冲击与转型</title>
+<style>
+/* ===================== 设计变量 ===================== */
+:root{
+  --  
+  --ink:#1F2937;
+  --ink-2:#4B5563;
+  --ink-3:#7B8391;
+  --line:#E8E6E0;
+  --line-soft:#F0EEE9;
+  --accent:#CDFC56;
+  --accent-hover:#D9FF70;
+  --accent-deep:#3D6B00;
+  --blue:#0973B2;
+  --blue-soft:#EDF5FA;
+  --case-bg:#EDF5FA;
+  --case-line:#D7E8F3;
+  --note-bg:#FBFDF3;
+  --note-line:#E4EDC8;
+  --dark:#16202E;
+  --radius-xl:24px;
+  --radius-lg:18px;
+  --radius-md:12px;
+  --shadow-sm:0 1px 2px rgba(22,32,46,.04);
+  --shadow-md:0 1px 2px rgba(22,32,46,.04), 0 16px 44px -24px rgba(22,32,46,.38);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:url ("bg.png") center/cover no-repeat;
+  color:var(--ink);
+  font-family:var(--font);
+  font-size:18px;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+p{margin:0 0 16px;}
+p:last-child{margin-bottom:0;}
+strong{color:var(--ink);font-weight:700;}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+section[id]{scroll-margin-top:92px;}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+
+/* ===================== 顶部导航 ===================== */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.88);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  backdrop-filter:blur(18px) saturate(160%);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:1180px;margin:0 auto;padding:0 32px;
+  height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  text-decoration:none;font-weight:800;font-size:18px;letter-spacing:-.01em;
+  color:var(--ink);white-space:nowrap;
+}
+.logo-mark{
+  width:30px;height:30px;border-radius:9px;
+  background:var(--accent);color:var(--dark);
+  display:grid;place-items:center;font-size:14px;font-weight:800;
+  box-shadow:0 4px 14px -6px rgba(205,252,86,.9);
+}
+.nav-links{display:flex;gap:2px;}
+.nav-links a{
+  font-size:14px;font-weight:500;color:var(--ink-2);text-decoration:none;
+  padding:8px 13px;border-radius:999px;white-space:nowrap;
+  transition:color .18s ease, background-color .18s ease;
+}
+.nav-links a:hover{color:var(--ink);background:var(--bg-soft);}
+.nav-links a.active{
+  color:var(--ink);background:var(--accent);
+  font-weight:700;box-shadow:0 4px 14px -8px rgba(205,252,86,1);
+}
+.nav-right{display:flex;align-items:center;gap:14px;}
+
+/* ===================== 按钮 ===================== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-size:15px;font-weight:600;line-height:1;
+  padding:15px 28px;border-radius:999px;
+  text-decoration:none;border:1px solid transparent;cursor:pointer;
+  transition:transform .18s ease, background-color .18s ease,
+             border-color .18s ease, box-shadow .18s ease;
+  white-space:nowrap;
+}
+.btn-primary{
+  background:var(--accent);color:var(--dark);
+  box-shadow:0 8px 24px -12px rgba(205,252,86,1);
+}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px);}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line);}
+.btn-ghost:hover{border-color:#CFCBC2;transform:translateY(-1px);}
+.btn-sm{padding:11px 20px;font-size:14px;}
+
+/* ===================== 全屏区块 ===================== */
+.screen{
+  position:relative;
+  min-height:calc(100vh - 72px);
+  display:flex;align-items:center;
+  padding:104px 0 88px;
+}
+.screen.soft{background:var(--bg-soft);}
+.screen-inner{width:100%;}
+
+/* ===================== 标题层级 ===================== */
+.page-title{
+  font-size:clamp(38px,5vw,58px);
+  line-height:1.15;font-weight:800;letter-spacing:-.035em;
+  margin:0 0 22px;color:var(--ink);
+}
+.screen-title{
+  font-size:clamp(28px,3.2vw,38px);
+  line-height:1.3;font-weight:800;letter-spacing:-.025em;
+  margin:0 0 12px;color:var(--ink);
+}
+.screen-title .num{color:var(--blue);font-weight:800;margin-right:14px;}
+.screen-desc{
+  font-size:18px;line-height:1.85;color:var(--ink-2);
+  max-width:860px;margin:12px 0 0;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:12px;font-weight:700;color:var(--ink-3);
+  letter-spacing:.12em;text-transform:uppercase;
+  margin-bottom:20px;
+}
+.eyebrow::before{
+  content:"";width:9px;height:9px;border-radius:3px;
+  background:var(--accent);
+}
+
+/* ===================== 封面 ===================== */
+.hero-grid{
+  display:grid;grid-template-columns:1.06fr .94fr;
+  gap:64px;align-items:center;
+}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:600;color:var(--ink-2);
+  background:#fff;border:1px solid var(--line);
+  padding:7px 14px 7px 11px;border-radius:999px;
+  margin-bottom:24px;
+}
+.pill-dot{
+  width:7px;height:7px;border-radius:50%;background:var(--blue);
+  box-shadow:0 0 0 3px rgba(9,115,178,.14);
+}
+.page-sub{
+  font-size:18px;line-height:1.85;color:var(--ink-2);
+  max-width:540px;margin:0 0 30px;
+}
+.team-row{display:flex;flex-wrap:wrap;gap:8px;}
+.team-chip{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14px;color:var(--ink-2);
+  padding:8px 15px;border-radius:999px;
+  background:#fff;border:1px solid var(--line);
+  transition:border-color .18s ease, transform .18s ease;
+}
+.team-chip:hover{border-color:#D9D5CC;transform:translateY(-1px);}
+.team-chip b{color:var(--ink);font-weight:700;}
+.scroll-hint{
+  margin-top:34px;font-size:13px;color:var(--ink-3);
+  display:inline-flex;align-items:center;gap:8px;
+}
+.scroll-hint i{
+  display:inline-block;width:1px;height:22px;
+  background:linear-gradient(180deg,var(--ink-3),transparent);
+}
+
+/* ===================== 图片容器 ===================== */
+.hero-visual{
+  border-radius:var(--radius-xl);overflow:hidden;
+  border:1px solid var(--line);background:#fff;
+  box-shadow:0 2px 4px rgba(22,32,46,.03), 0 30px 70px -38px rgba(22,32,46,.5);
+}
+.media-slot{
+  position:relative;width:100%;
+  aspect-ratio:16/10;
+  background:linear-gradient(135deg,#EDF5FA 0%,#F7F6F3 100%);
+  overflow:hidden;
+}
+.media-slot::after{
+  content:attr(data-label);
+  position:absolute;inset:0;z-index:0;
+  display:grid;place-items:center;text-align:center;
+  padding:20px;font-size:13px;line-height:1.6;color:#9AA1AC;
+}
+.media-slot img{
+  position:absolute;inset:0;z-index:1;
+  width:100%;height:100%;object-fit:cover;
+}
+.media-slot.tall{aspect-ratio:4/3;}
+.media-slot.wide{aspect-ratio:16/7;}
+
+.media-row{display:grid;gap:20px;margin-top:30px;}
+.media-row.cols-2{grid-template-columns:1fr 1fr;}
+.media-row.cols-3{grid-template-columns:repeat(3,1fr);}
+.media-figure{
+  margin:0;border-radius:var(--radius-lg);overflow:hidden;
+  border:1px solid var(--line);background:#fff;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.media-figure:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);}
+.media-figure figcaption{
+  padding:12px 16px;font-size:13px;line-height:1.6;color:var(--ink-3);
+  border-top:1px solid var(--line-soft);
+}
+
+/* ===================== 数据仪表盘 ===================== */
+.stats-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+  margin-top:30px;
+}
+.stat-card{
+  background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:26px 24px;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.stat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);}
+.stat-value{
+  font-size:40px;font-weight:800;line-height:1.08;letter-spacing:-.035em;
+  color:var(--ink);font-variant-numeric:tabular-nums;
+}
+.stat-value span{font-size:20px;font-weight:700;color:var(--blue);margin-left:2px;}
+.stat-label{font-size:14px;line-height:1.6;color:var(--ink-3);margin-top:9px;}
+.stat-trend{
+  display:inline-block;margin-top:16px;
+  font-size:12px;font-weight:600;color:var(--ink-2);
+  background:var(--bg-soft);border:1px solid var(--line-soft);
+  padding:4px 10px;border-radius:999px;
+}
+.stat-trend.hi{
+  color:var(--accent-deep);background:rgba(205,252,86,.32);
+  border-color:rgba(205,252,86,.55);
+}
+
+/* ===================== 折叠面板 ===================== */
+.panels{display:flex;flex-direction:column;gap:12px;margin-top:30px;}
+details.panel{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-sm);
+  overflow:hidden;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+details.panel:hover{border-color:#D9D5CC;}
+details.panel[open]{border-color:#D5E4EE;box-shadow:var(--shadow-md);}
+details.panel > summary{
+  list-style:none;cursor:pointer;
+  display:flex;align-items:center;gap:16px;
+  padding:22px 26px;
+}
+details.panel > summary::-webkit-details-marker{display:none;}
+details.panel > summary::marker{content:"";}
+
+.panel-num{
+  flex:none;font-size:13px;font-weight:700;line-height:1.5;
+  color:var(--ink-2);background:var(--bg-soft);
+  padding:3px 11px;border-radius:999px;letter-spacing:.04em;
+  transition:background-color .2s ease, color .2s ease;
+}
+details[open] .panel-num{background:var(--accent);color:var(--accent-deep);}
+
+.panel-title{
+  flex:1;margin:0;
+  font-size:clamp(20px,2.2vw,28px);
+  line-height:1.36;font-weight:700;letter-spacing:-.015em;
+  color:var(--ink);
+}
+.toggle{
+  flex:none;width:32px;height:32px;border-radius:50%;
+  border:1px solid var(--line);color:var(--ink-3);
+  display:grid;place-items:center;position:relative;
+  transition:background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+.toggle::before,.toggle::after{
+  content:"";position:absolute;background:currentColor;border-radius:2px;
+}
+.toggle::before{width:13px;height:1.5px;}
+.toggle::after{width:1.5px;height:13px;transition:transform .26s ease;}
+details[open] .toggle{
+  background:var(--accent);border-color:var(--accent);color:var(--dark);
+}
+details[open] .toggle::after{transform:rotate(90deg);}
+
+.panel-body{
+  padding:2px 26px 26px;
+  font-size:18px;line-height:1.85;color:var(--ink-2);
+}
+.panel-body strong{color:var(--ink);}
+.src{font-size:14px;color:var(--ink-3);}
+
+/* ===================== 标签 / 案例 / 提示 ===================== */
+.tag{
+  display:inline-block;font-size:13px;font-weight:600;line-height:1.6;
+  color:var(--blue);background:var(--blue-soft);
+  padding:4px 12px;border-radius:999px;margin-bottom:14px;
+  border:1px solid var(--case-line);
+}
+.case-block{
+  background:var(--case-bg);
+  border:1px solid var(--case-line);
+  border-radius:var(--radius-md);
+  padding:20px 22px;margin-top:20px;
+}
+.note-block{
+  background:var(--note-bg);
+  border:1px solid var(--note-line);
+  border-radius:var(--radius-md);
+  padding:22px 24px;margin-top:24px;
+}
+.block-label{
+  display:flex;align-items:center;gap:9px;
+  font-size:13px;font-weight:700;letter-spacing:.1em;
+  color:var(--blue);margin-bottom:10px;
+}
+.block-label::before{
+  content:"";width:8px;height:8px;border-radius:3px;background:var(--blue);
+}
+.note-block .block-label{color:var(--accent-deep);}
+.note-block .block-label::before{background:var(--accent);}
+.case-block p,.note-block p{font-size:17px;line-height:1.85;color:var(--ink-2);}
+
+/* 核心原因 */
+.core{
+  background:#F7FBFE;
+  border-left:2px solid var(--blue);
+  border-radius:0 10px 10px 0;
+  padding:12px 18px;margin-top:8px;
+  color:var(--ink-2);font-size:17px;
+}
+.core strong{color:var(--blue);}
+
+/* ===================== 列表 ===================== */
+ol.list{
+  counter-reset:step;list-style:none;
+  padding-left:0;margin:14px 0 18px;
+}
+ol.list > li{
+  position:relative;padding-left:38px;margin-bottom:14px;
+  counter-increment:step;color:var(--ink-2);
+}
+ol.list > li:last-child{margin-bottom:0;}
+ol.list > li::before{
+  content:counter(step);
+  position:absolute;left:0;top:5px;
+  width:25px;height:25px;border-radius:50%;
+  background:var(--blue-soft);color:var(--blue);
+  font-size:13px;font-weight:700;line-height:1;
+  display:grid;place-items:center;
+}
+.li-title{display:block;font-weight:700;color:var(--ink);margin-bottom:2px;}
+
+/* ===================== 表格 ===================== */
+.table-wrap{
+  margin:20px 0;
+  overflow-x:auto;
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  background:#fff;
+  -webkit-overflow-scrolling:touch;
+}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:15px;line-height:1.75;}
+thead th{
+  background:var(--bg-soft);color:var(--ink);font-weight:700;font-size:14px;
+  text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);
+  white-space:nowrap;
+}
+tbody td{
+  padding:14px 16px;border-bottom:1px solid var(--line-soft);
+  color:var(--ink-2);vertical-align:top;
+}
+tbody td:first-child{
+  font-weight:700;color:var(--ink);white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover td{background:#FCFCFA;}
+
+/* ===================== 案例屏导语 ===================== */
+.case-intro{
+  display:grid;grid-template-columns:1.18fr .82fr;
+  gap:20px;margin-top:30px;align-items:stretch;
+}
+.case-intro .media-figure{display:flex;flex-direction:column;}
+.case-intro .media-slot{aspect-ratio:16/9;}
+.case-quote-card{
+  background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:32px 30px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.case-quote-card blockquote{
+  margin:0 0 22px;
+  font-size:21px;line-height:1.72;font-weight:600;
+  letter-spacing:-.015em;color:var(--ink);
+}
+.case-quote-card blockquote::before{
+  content:"“";color:var(--accent);font-size:40px;line-height:0;
+  vertical-align:-12px;margin-right:4px;font-weight:800;
+}
+.case-quote-card .quote-note{
+  font-size:14px;line-height:1.7;color:var(--ink-3);margin:0;
+}
+
+/* ===================== 页脚 ===================== */
+.footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:56px 0 32px;}
+.footer-grid{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;
+  gap:40px;margin-bottom:36px;
+}
+.footer-tagline{font-size:14px;line-height:1.8;color:var(--ink-3);margin:14px 0 0;max-width:300px;}
+.footer-title{
+  font-size:12px;font-weight:700;color:var(--ink-2);
+  letter-spacing:.12em;text-transform:uppercase;margin:0 0 16px;
+}
+.footer-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;}
+.footer-links a{font-size:14px;color:var(--ink-3);text-decoration:none;transition:color .18s ease;}
+.footer-links a:hover{color:var(--blue);}
+.footer-bottom{
+  border-top:1px solid var(--line);
+  padding-top:22px;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  font-size:13px;color:var(--ink-3);
+}
+
+/* ===================== 滚动渐显 ===================== */
+.reveal{
+  opacity:0;transform:translateY(20px);
+  transition:opacity .65s cubic-bezier(.2,.7,.3,1),
+             transform .65s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.is-visible{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .reveal{opacity:1;transform:none;transition:none;}
+  .btn,.stat-card,.media-figure,details.panel,.team-chip{transition:none;}
+}
+
+/* ===================== 响应式 ===================== */
+@media (max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:48px;}
+  .page-sub{max-width:100%;}
+  .hero-visual{max-width:560px;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .media-row.cols-3{grid-template-columns:1fr 1fr;}
+  .case-intro{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+}
+@media (max-width:860px){
+  .nav-links{
+    width:100%;overflow-x:auto;flex-wrap:nowrap;
+    gap:4px;padding-bottom:2px;
+  }
+  .nav-links::-webkit-scrollbar{height:0;}
+  .nav-links a{font-size:13px;padding:7px 11px;flex:none;}
+  .nav-inner{
+    height:auto;flex-direction:column;align-items:flex-start;
+    justify-content:center;padding:10px 24px;gap:8px;
+  }
+  .nav-right{display:none;}
+  .screen{padding:76px 0 64px;min-height:0;}
+  section[id]{scroll-margin-top:112px;}
+}
+@media (max-width:640px){
+  body{font-size:17px;}
+  .wrap{padding:0 20px;}
+  .page-title{font-size:34px;}
+  .screen-title{font-size:26px;}
+  .page-sub,.screen-desc{font-size:16px;}
+  .stats-grid,.media-row.cols-2,.media-row.cols-3{grid-template-columns:1fr;}
+  .media-slot.wide{aspect-ratio:16/9;}
+  .panel-title{font-size:19px;}
+  details.panel > summary{padding:17px 18px;gap:11px;}
+  .panel-body{padding:0 18px 20px;font-size:16px;line-height:1.82;}
+  .panel-num{font-size:11px;padding:2px 9px;}
+  .toggle{width:28px;height:28px;}
+  .case-block,.note-block{padding:16px 18px;}
+  .case-block p,.note-block p,.core{font-size:16px;}
+  .stat-value{font-size:34px;}
+  .case-quote-card{padding:26px 22px;}
+  .case-quote-card blockquote{font-size:18px;}
+  table{font-size:14px;min-width:700px;}
+  .footer-grid{grid-template-columns:1fr;gap:28px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== 顶部导航 ===================== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#screen-0">
+      <span class="logo-mark">荧</span>
+      <span>荧屏观察</span>
+    </a>
+    <nav class="nav-links" aria-label="页面导航">
+      <a href="#screen-1">姜和君 · 冲击是什么</a>
+      <a href="#screen-2">于爽 · 成因分析</a>
+      <a href="#screen-3">姚晓煊 · 应对措施</a>
+      <a href="#screen-4">李思婧 · 典型案例</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-primary btn-sm" href="#summary">查看总结</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== 封面 ===================== -->
+  <section class="screen" id="screen-0">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <span class="pill"><span class="pill-dot"></span>Research Project · 2026</span>
+          <h1 class="page-title">新媒体时代电视广告行业的冲击与转型</h1>
+          <p class="page-sub">冲击的本质，是使电视从「大众传播中心」变为「整合营销的一个选项」。本项目从现象、成因、应对与案例四个层面，梳理这场正在发生的行业变迁。</p>
+          <div class="team-row">
+            <span class="team-chip"><b>姜和君</b> · 冲击是什么</span>
+            <span class="team-chip"><b>于爽</b> · 成因分析</span>
+            <span class="team-chip"><b>姚晓煊</b> · 应对措施</span>
+            <span class="team-chip"><b>李思婧</b> · 典型案例</span>
+          </div>
+          <span class="scroll-hint"><i></i>向下滚动，查看四个研究部分</span>
+        </div>
+
+        <figure class="hero-visual reveal" style="margin:0;">
+          <div class="media-slot tall" data-label="图片 01 · 电视多屏内容墙">
+            <!-- 对应你提供的第 1 张图，把文件放到 images/01-tv-multiscreen.png -->
+            <img src="images/01-tv-multiscreen.png" alt="电视屏幕上呈现多个频道与广告内容" loading="eager" />
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 第一屏 · 冲击是什么 ===================== -->
+  <section class="screen soft" id="screen-1">
+    <div class="wrap">
+      <div class="reveal">
+        <h2 class="screen-title"><span class="num">01</span>新媒体冲击电视广告，主要体现为</h2>
+        <p class="screen-desc">从注意力、预算、传播逻辑、广告形式到权威性，五个层面的变化已经在同一时间发生。</p>
+      </div>
+
+      <!-- 数据仪表盘 -->
+      <div class="stats-grid reveal">
+        <div class="stat-card">
+          <div class="stat-value">30.2<span>%</span></div>
+          <div class="stat-label">2025 年电视开机率</div>
+          <div class="stat-trend">2016 年为 70%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">89.1<span>%</span></div>
+          <div class="stat-label">互联网广告占各类媒介广告收入比重</div>
+          <div class="stat-trend hi">收入 12518.4 亿元</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">-16.3<span>%</span></div>
+          <div class="stat-label">2025 年电视广告发布收入同比</div>
+          <div class="stat-trend">份额持续被蚕食</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">-6.35<span>%</span></div>
+          <div class="stat-label">央卫视 49 个频道硬广投放时长降幅</div>
+          <div class="stat-trend">晚间黄金时段更明显</div>
+        </div>
+      </div>
+
+      <!-- 配图 -->
+      <div class="media-row cols-2 reveal">
+        <figure class="media-figure">
+          <div class="media-slot wide" data-label="图片 05 · 手机碎片化观看">
+            <!-- 对应你提供的第 5 张图 -->
+            <img src="images/05-phone-hands.png" alt="多部手机同时使用的碎片化观看场景" loading="lazy" />
+          </div>
+          <figcaption>受众注意力转向手机、平板与智能电视点播，观看变得碎片化、个人化</figcaption>
+        </figure>
+        <figure class="media-figure">
+          <div class="media-slot wide" data-label="图片 02 · 多屏内容矩阵">
+            <!-- 对应你提供的第 2 张图 -->
+            <img src="images/02-multi-screen-wall.png" alt="由大量屏幕组成的内容矩阵" loading="lazy" />
+          </div>
+          <figcaption>广告主面对的不再是单一频道，而是多平台、多终端的媒介环境</figcaption>
+        </figure>
+      </div>
+
+      <div class="panels reveal">
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">01</span>
+            <h3 class="panel-title">受众注意力被严重分流</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <p>新媒体冲击传统电视广告，本质是使电视从“大众传播中心”变为“整合营销的一个选项”。电视核心资产是“家庭大屏+黄金时段”的集中注意力，但新媒体让用户转向手机、平板和智能电视点播，观看碎片化、个人化。</p>
+            <p>从受众结构看，电视开机率从2016年的70%跌至2025年的30.2%<span class="src">（数据来源:中国电子视像行业协会《2025年中国家庭电视使用行为调查报告》）</span>，65岁及以上用户占大屏用户的31.1%，是体量最大的年龄群体<span class="src">（数据来源:CSM电视大屏分平台收视数据）</span>。</p>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">02</span>
+            <h3 class="panel-title">广告预算大规模迁移</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <p>因其可精准投放且预算门槛更低，效果广告流向数字端、品牌广告向内容与电商平台倾斜，电视广告份额持续被蚕食。</p>
+            <p>2025年电视广告发布收入同比下降16.3%。与此同时，互联网广告发布收入达12518.4亿元，占各类媒介广告发布收入的89.1%<span class="src">（数据来源：国家市场监督管理总局）</span>。</p>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">03</span>
+            <h3 class="panel-title">传播逻辑从“广播”变成“精准分发”</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <p>广告主过去买电视时段，如今更愿在互联网平台买“人群”。新媒体形式多样、可互动跳转即时购买且数据实时，而电视收视率样本有限、反馈滞后。</p>
+            <p><strong>传统电视：</strong>买的是曝光量。《新闻联播》后等黄金时段。企业知道花了多少钱、覆盖多少人，但不知道具体是谁看了、谁因为广告购买了。</p>
+            <p><strong>新媒体：</strong>买的是用户。双11期间，商家在阿里妈妈、巨量千川上竞价，购买一次在被算法识别为“可能转化”的用户面前曝光的机会。</p>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">04</span>
+            <h3 class="panel-title">广告形式与效果评估被颠覆</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <p>电视广告形式固定，流媒体和智能电视让用户可点播、跳过、会员免广告，“强制收看”优势不再。</p>
+            <p>央卫视49个频道硬广全天时段投放品牌数与时长分别下降1.8%和6.35%，晚间黄金时段降幅尤为显著。<span class="src">（数据来源：北京击壤科技有限公司《2025年电视硬广洞察》）</span></p>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">05</span>
+            <h3 class="panel-title">电视广告权威被侵蚀</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <p>日常品牌曝光、年轻用户触达、效果转化等场景，已被短视频和社交平台替代。百事公司在停止线性电视广告投放一年后，其澳大利亚和新西兰区的饮料营销总监苏珊·普雷斯公开表示：“没有任何数据表明我们因为不在线性电视领域而错失了触达和ROI。”</p>
+            <p>虽电视广告原有权威性、家庭场景和品牌背书仍有一定价值，尤其央视、头部卫视和春晚等大事件。如汉维药业品牌以央视17个频道为主阵地投放维生素D广告，央视渠道累计触达16.46亿人次，终端渠道铺货率提升45%，销售额同比增长近100%。这说明央视的权威背书在特定品类（如医药保健品）中，确实能直接转化为渠道信心和终端动销。</p>
+            <p>但地方台和弱势频道广告收入下滑更明显，马太效应加剧。2026年6月，甘肃卫视因省外落地覆盖财政资金大幅缩减，暂停在黑龙江、江苏、广东、广西、四川五省的传统有线电视网络落地传输。</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 第二屏 · 成因分析 ===================== -->
+  <section class="screen" id="screen-2">
+    <div class="wrap">
+      <div class="reveal">
+        <h2 class="screen-title"><span class="num">02</span>为什么新媒体会改变电视广告行业？</h2>
+        <p class="screen-desc">不是单一渠道的出现，而是受众、技术、需求与媒介关系同时发生了变化。</p>
+      </div>
+
+      <div class="media-row cols-2 reveal">
+        <figure class="media-figure">
+          <div class="media-slot wide" data-label="图片 04 · 家庭客厅观看场景">
+            <!-- 对应你提供的第 4 张图 -->
+            <img src="images/04-family-tv.png" alt="家庭在客厅共同观看电视的场景" loading="lazy" />
+          </div>
+          <figcaption>电视仍是家庭场景的中心，但不再是唯一的注意力入口</figcaption>
+        </figure>
+        <figure class="media-figure">
+          <div class="media-slot wide" data-label="图片 03 · 发光屏幕与内容分发">
+            <!-- 对应你提供的第 3 张图 -->
+            <img src="images/03-glowing-tv.png" alt="屏幕上大量内容向外扩散的视觉" loading="lazy" />
+          </div>
+          <figcaption>数字技术让广告投放从“买时段”转向“买人群”</figcaption>
+        </figure>
+      </div>
+
+      <div class="panels reveal">
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">01</span>
+            <h3 class="panel-title">受众习惯变化：注意力更加分散</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <p>过去，观众主要通过电视节目接触广告。如今，短视频、网络视频和社交媒体让用户能够随时选择内容，观看方式更加个性化、碎片化。</p>
+            <p class="core"><strong>核心原因：</strong>受众的时间和注意力被更多平台分散，电视广告不再天然占据传播中心。</p>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">02</span>
+            <h3 class="panel-title">数字技术发展：广告投放逻辑改变</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <p>传统电视广告主要依靠频道、节目和播出时段进行投放，而数字平台可以根据受众特征进行定向投放，并提供点击、互动等反馈数据。</p>
+            <p class="core"><strong>核心原因：</strong>广告投放从侧重覆盖广泛受众，逐渐转向关注目标人群与传播效果。</p>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">03</span>
+            <h3 class="panel-title">广告主需求变化：预算分配更加灵活</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <p>不同的营销目标需要不同的传播渠道。电视广告适合品牌曝光和集中传播，数字平台则更便于互动、灵活投放和追踪转化。</p>
+            <p class="core"><strong>核心原因：</strong>广告主更加重视营销目标与投入产出，广告预算也随之在不同媒介之间调整。</p>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">04</span>
+            <h3 class="panel-title">媒介融合：竞争与合作并存</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <p>电视节目可以通过短视频和社交媒体继续传播，网络内容也能进入家庭大屏。不同媒介之间的边界逐渐模糊。</p>
+            <p class="core"><strong>核心原因：</strong>电视广告的竞争从电视台之间扩展到多平台，同时也获得了跨平台传播与合作的机会。</p>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="note-block reveal">
+        <span class="block-label">面板小结 · 变化的本质是什么？</span>
+        <p>新媒体改变电视广告行业，不只是因为出现了新的传播渠道，更因为受众注意力、广告投放逻辑、营销需求和媒介竞争关系都发生了变化。</p>
+        <p>电视广告并非失去价值，而是需要在新的媒介环境中重新认识自身优势，通过大小屏联动、内容原生融合、拥抱技术红利以及重构商业模式实现转型。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 第三屏 · 应对措施 ===================== -->
+  <section class="screen soft" id="screen-3">
+    <div class="wrap">
+      <div class="reveal">
+        <h2 class="screen-title"><span class="num">03</span>新媒体时代电视广告业的应对措施</h2>
+        <p class="screen-desc">在新媒体冲击下，电视广告需要跳出单向硬广思维，通过四大路径完成转型，发挥大屏家庭沉浸感与品牌背书的独有优势。</p>
+      </div>
+
+      <div class="media-row cols-3 reveal">
+        <figure class="media-figure">
+          <div class="media-slot" data-label="图片 06 · 春晚竖屏直播">
+            <!-- 对应你提供的第 6 张图 -->
+            <img src="images/06-spring-festival-vertical.png" alt="春晚竖屏直播画面" loading="lazy" />
+          </div>
+          <figcaption>大小屏联动：大屏完成曝光，小屏承接互动与转化</figcaption>
+        </figure>
+        <figure class="media-figure">
+          <div class="media-slot" data-label="图片 07 · 向往的生活">
+            <!-- 对应你提供的第 7 张图 -->
+            <img src="images/07-back-to-field.png" alt="综艺节目生活化场景" loading="lazy" />
+          </div>
+          <figcaption>内容原生融合：把品牌嵌入生活化叙事，而非生硬插播</figcaption>
+        </figure>
+        <figure class="media-figure">
+          <div class="media-slot" data-label="图片 08 · 青春芒果节">
+            <!-- 对应你提供的第 8 张图 -->
+            <img src="images/08-mango-festival.png" alt="青春芒果节主视觉" loading="lazy" />
+          </div>
+          <figcaption>商业模式重构：IP 线下活动与线上传播联动</figcaption>
+        </figure>
+      </div>
+
+      <div class="panels reveal">
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">01</span>
+            <h3 class="panel-title">大小屏联动：从“单向曝光”到“更完整的链路承接”</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <span class="tag">（奠定渠道基础）</span>
+            <p>传统电视广告仅实现大屏单向曝光，无法追踪用户后续兴趣与转化行为。大小屏联动将电视大屏作为营销主阵地与信任入口，短视频、社交平台、电商小程序承担话题发酵、用户互动与转化承接，打通预热、播出、话题传播、消费转化、长尾传播全流程，解决大小屏传播割裂问题。</p>
+            <p><strong>主要执行两点：</strong></p>
+            <ol class="list">
+              <li>借助晚会综艺完成品牌形象塑造，通过二维码、互动玩法，把大屏流量导流至手机端，实现大屏信任背书，小屏承接转化；</li>
+              <li>将电视素材二次剪辑为短视频切片、挑战赛内容社交分发，拉长传播周期。</li>
+            </ol>
+            <div class="case-block">
+              <span class="block-label">案例</span>
+              <p>总台春晚与微信视频号“竖屏看春晚”：电视大屏完成直播与品牌集中曝光，视频号竖屏直播承接红包、互动玩法，实现双向联动；湖南卫视双11开幕盛典，晚会大屏营造大促氛围，引导观众跳转品牌直播间完成成交。</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">02</span>
+            <h3 class="panel-title">内容原生融合：从“生硬插播”到“场景化种草”</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <span class="tag">（用户体验核心）</span>
+            <p>贴片硬广会打断节目观看节奏，容易引发观众抵触。内容原生融合摒弃叫卖式硬广，把品牌自然嵌入节目叙事与家庭观看场景，降低广告的推销感，依靠大屏沉浸感实现情感共鸣与场景化种草。</p>
+            <p><strong>主要落地形式：</strong></p>
+            <ol class="list">
+              <li>节目深度共创植入：品牌提前参与节目策划，把产品变为道具、任务环节，与节目主题相契合；</li>
+              <li>OTT 场景原生广告：结合家庭追剧、聚餐、亲子观影场景，把创意广告融入电视观影界面，而非强制弹窗。</li>
+            </ol>
+            <div class="case-block">
+              <span class="block-label">案例</span>
+              <p>综艺《向往的生活》，品牌融入做饭、下午茶等生活化情节，嘉宾自然使用产品，无刻意推销；乐事 × 小米电视 OTT 创意广告，紧扣居家追剧吃零食的场景，将广告原生融入观影界面。</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">03</span>
+            <h3 class="panel-title">拥抱技术红利：从“粗放投放”到“精准智能触达”</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <span class="tag">（量化投放价值）</span>
+            <p>传统有线电视广告只能依靠收视率评估效果，无法区分家庭人群特征，投放较为粗放。依托 OTT 智能大屏、大数据与 AI 补齐数据短板，一方面实现广告的定向精准投放；另一方面搭建多维度可验证的效果评估体系，兼顾短期转化和长期品牌价值，向广告主证明 ROI（投资回报率）。</p>
+            <ol class="list">
+              <li><span class="li-title">投放上：</span>在合规前提下基于家庭收视标签，按地域、家庭构成、兴趣做定向，利用开机、暂停、回看、屏保点位，触达家居、母婴、食品等家庭决策类人群。</li>
+              <li><span class="li-title">评估上：</span>不只参考收视率，整合大屏收视、短视频播放、社交互动、UGC 二创、品牌调研等输出结案报告；AI 基于脱敏数据动态优化广告素材与投放时段。</li>
+            </ol>
+            <div class="case-block">
+              <span class="block-label">案例</span>
+              <p>聚好看 OTT 大屏营销体系，基于合规家庭收视标签做定向投放，面向家庭消费类商品精准触达受众；结案报告除曝光数据外，还提供受众画像、广告互动等指标，直观展现大屏广告效果。</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">04</span>
+            <h3 class="panel-title">重构商业模式：从“卖广告位”到“卖生态与服务”</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <span class="tag">（拓展商业生态）</span>
+            <p>传统广电主要依靠售卖广告时段盈利，模式单一、抗风险弱。电视台要盘活 IP、制作团队、主持人、公信力、线下运营等自有资产，从单纯售卖广告点位转向整合生态服务，开辟多元变现路径，降低对传统硬广的依赖。</p>
+            <p><strong>三个主要方向：</strong></p>
+            <ol class="list">
+              <li>输出整合营销全案：打包大屏露出、短视频制作、社交话题、线上活动一体化服务；</li>
+              <li>布局广电 MCN：将主持人、栏目 IP 孵化短视频账号矩阵，承接品牌推广、直播带货；</li>
+              <li>IP 线下活动：依托节目 IP 举办嘉年华、展会，打通线上传播与线下体验。</li>
+            </ol>
+            <div class="case-block">
+              <span class="block-label">案例</span>
+              <p>河南广电大象 MCN：省级广电 MCN 代表，孵化《小莉帮忙》等大屏衍生千万粉丝账号矩阵，承接品牌短视频、直播、文旅传播业务；青春芒果节打造 IP 线下嘉年华，实现线上节目、短视频、线下展位的联动营销。</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="note-block reveal">
+        <span class="block-label">本板块小结</span>
+        <p>电视广告不必和短视频比拼碎片化流量，核心竞争力来自大屏的家庭沉浸场景、仪式感与公信力。四大策略相辅相成：打通传播链路、优化受众体验、数据佐证投放价值、升级商业服务模式，完成从广告播出渠道向全链路营销服务商的转型。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 第四屏 · 典型案例 ===================== -->
+  <section class="screen" id="screen-4">
+    <div class="wrap">
+      <div class="reveal">
+        <h2 class="screen-title"><span class="num">04</span>典型案例分析：《典籍里的中国》</h2>
+        <p class="screen-desc">一个头部文化 IP 的三季广告模式，正好记录了电视广告从“卖时段”走向“卖 IP 价值”的过程。</p>
+      </div>
+
+      <div class="case-intro reveal">
+        <figure class="media-figure">
+          <div class="media-slot" data-label="图片 09 · 典籍里的中国">
+            <!-- 对应你提供的第 9 张图 -->
+            <img src="images/09-classics-china.png" alt="典籍里的中国节目主视觉" loading="lazy" />
+          </div>
+          <figcaption>《典籍里的中国》· 总台大型文化类综艺</figcaption>
+        </figure>
+        <div class="case-quote-card">
+          <blockquote>广告不再只是大屏短时曝光，变成跨屏整合营销。</blockquote>
+          <p class="quote-note">从第一季的电视广告为主，到第三季把短视频切片、社交媒体传播直接写进广告权益包，新媒体从“配套增值”变成了“不可缺少的部分”。</p>
+        </div>
+      </div>
+
+      <div class="panels reveal">
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">01</span>
+            <h3 class="panel-title">三季广告模式对比</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <p>《典籍里的中国》是总台推出的大型文化类综艺，采用戏剧影视化形式演绎中华经典典籍。作为头部文化IP，该节目三季持续进行商业招商，设置独家冠名、特约赞助等广告合作，依托电视大屏播出并联动央视频等新媒体平台，将跨屏传播权益纳入广告资源包，实现传统电视广告与新媒体营销融合。</p>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>项目</th>
+                    <th>第一季（2021）</th>
+                    <th>第二季（2022）</th>
+                    <th>第三季（2026）</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>独家冠名商</td>
+                    <td>光明乳业</td>
+                    <td>光明乳业</td>
+                    <td>青花郎</td>
+                  </tr>
+                  <tr>
+                    <td>广告客户结构</td>
+                    <td>冠名+特约+基础赞助</td>
+                    <td>冠名+特别呈现+赞助</td>
+                    <td>独家冠名为主</td>
+                  </tr>
+                  <tr>
+                    <td>广告逻辑</td>
+                    <td>电视广告为主，新媒体作为配套增值</td>
+                    <td>大屏+短视频IP营销并重，品牌联名升级</td>
+                    <td>广告打包：电视大屏+新媒体权益一体化招商，短视频切片、社交媒体传播直接写进广告权益包</td>
+                  </tr>
+                  <tr>
+                    <td>新媒体广告定位</td>
+                    <td>节目配套衍生内容</td>
+                    <td>品牌独立短视频专栏+电商联动</td>
+                    <td>招商方案内置新媒体传播权益，成为广告售卖不可缺少部分</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>对比《典籍里的中国》三季广告模式，能够直观看到新媒体冲击下传统电视广告的转型轨迹。第一季广告以央视大屏标版、口播等传统电视广告形式为主，传播局限于线性电视，广告价值依托电视公信力。随着新媒体渠道成熟，节目广告资源逐步打包央视频、短视频、话题二创等新媒体权益，广告不再只是大屏短时曝光，变成跨屏整合营销。新媒体弱化了电视单一的广告渠道优势，倒逼节目从“卖时段”转向“卖IP价值”；品牌不再单纯购买电视收视，而是借大小屏联动实现文化种草。同时也凸显矛盾：新媒体追求传播热度，电视文化节目需要内容庄重感，二者如何平衡植入尺度，是文化综艺商业化的难点。</p>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <span class="panel-num">02</span>
+            <h3 class="panel-title">传统电视人的转型实践</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="panel-body">
+            <ol class="list">
+              <li>
+                <span class="li-title">大小屏联动营销</span>
+                节目在央视一套电视端首播，同时在央视频上线完整版正片。节目组将名场面片段、经典台词、人物高光片段剪辑成短视频，分发抖音、视频号、微博，制造全网热搜。电视大屏打造庄重权威的节目质感，新媒体小屏负责话题扩散、网友讨论，实现跨平台传播。
+              </li>
+              <li>
+                <span class="li-title">广告转向内容化，推出整合营销方案</span>
+                减少生硬的电视插播硬广，采用文化向软性植入、节目联合冠名。品牌购买的不再只是电视时段广告，而是电视节目露出 + 短视频衍生内容 + 全网话题传播的打包整合营销方案，贴合节目厚重的文化调性。
+              </li>
+              <li>
+                <span class="li-title">更新效果评估指标</span>
+                向广告客户展示传播效果时，不只提供央视一套收视率，同时附带短视频播放量、全网话题阅读量、社交媒体讨论量、二创作品数量等多维度数据，用跨平台综合数据证明广告传播价值。
+              </li>
+              <li>
+                <span class="li-title">搭建自有新媒体渠道，拓展变现</span>
+                依托自有平台央视频，运营《典籍里的中国》官方账号，在账号发布幕后花絮、典籍科普短视频、直播活动。依托账号承接文创合作、文化品牌推广，开辟电视广告之外新的商业变现路径，降低对传统电视硬广的依赖。
+              </li>
+            </ol>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="note-block reveal" id="summary">
+        <span class="block-label">页面整体总结</span>
+        <p>综合来看，新媒体带来的受众、技术、预算、媒介格局多重变化，让传统电视广告遭遇巨大挑战，但家庭大屏的公信力、沉浸式场景依旧具备不可替代的商业价值。电视媒体需要落实大小屏联动、内容原生融合、技术智能赋能、商业模式重构四条路径，完成从单纯时段售卖向全链路整合营销服务商的转型，《典籍里的中国》的商业化实践正是该转型路径的典型样本。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== 页脚 ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="#screen-0">
+          <span class="logo-mark">荧</span>
+          <span>荧屏观察</span>
+        </a>
+        <p class="footer-tagline">新媒体时代电视广告行业的冲击与转型 · 从现象、成因、应对到案例的一次完整梳理。</p>
+      </div>
+      <div>
+        <h4 class="footer-title">研究部分</h4>
+        <ul class="footer-links">
+          <li><a href="#screen-1">01 冲击是什么</a></li>
+          <li><a href="#screen-2">02 成因分析</a></li>
+          <li><a href="#screen-3">03 应对措施</a></li>
+          <li><a href="#screen-4">04 典型案例</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">小组成员</h4>
+        <ul class="footer-links">
+          <li><a href="#screen-1">姜和君 · 冲击是什么</a></li>
+          <li><a href="#screen-2">于爽 · 成因分析</a></li>
+          <li><a href="#screen-3">姚晓煊 · 应对措施</a></li>
+          <li><a href="#screen-4">李思婧 · 典型案例</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 荧屏观察 · 课程研究项目</span>
+      <span>从大众传播中心，到整合营销的一个选项</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  /* ---------- 滚动高亮导航 ---------- */
+  var screens = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+
+  function activate(id) {
+    links.forEach(function (link) {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+    });
+  }
+
+  function onScroll() {
+    if (!screens.length) return;
+    var probe = window.pageYOffset + window.innerHeight * 0.34;
+    var current = '';
+    screens.forEach(function (sec) {
+      if (sec.offsetTop <= probe) current = sec.id;
+    });
+    if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 4) {
+      current = screens[screens.length - 1].id;
+    }
+    activate(current);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  links.forEach(function (link) {
+    link.addEventListener('click', function () {
+      activate(link.getAttribute('href').slice(1));
+    });
+  });
+  onScroll();
+
+  /* ---------- 滚动渐显 ---------- */
+  var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if (!items.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('is-visible'); });
+    return;
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+  items.forEach(function (el) { io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
